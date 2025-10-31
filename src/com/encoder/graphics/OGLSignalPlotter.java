@@ -8,7 +8,7 @@ import com.jogamp.opengl.util.FPSAnimator;
 import javax.swing.JFrame;
 import java.util.List;
 
-public class SignalPlotter {
+public class OGLSignalPlotter {
 
     public static void plot(List<Double> levels, String title) {
         // Get the default OpenGL profile (e.g., GL2)
@@ -19,7 +19,7 @@ public class SignalPlotter {
         GLCanvas glcanvas = new GLCanvas(capabilities);
         
         // Create our custom renderer and add it
-        SignalRenderer renderer = new SignalRenderer(levels);
+        OGLSignalRenderer renderer = new OGLSignalRenderer(levels);
         glcanvas.addGLEventListener(renderer);
         glcanvas.setSize(800, 400);
 

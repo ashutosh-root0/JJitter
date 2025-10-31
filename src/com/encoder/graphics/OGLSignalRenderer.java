@@ -6,12 +6,12 @@ import com.jogamp.opengl.GLEventListener;
 import com.jogamp.opengl.glu.GLU;
 import java.util.List;
 
-public class SignalRenderer implements GLEventListener {
+public class OGLSignalRenderer implements GLEventListener {
 
     private List<Double> signalLevels;
     private GLU glu = new GLU();
 
-    public SignalRenderer(List<Double> levels) {
+    public OGLSignalRenderer(List<Double> levels) {
         this.signalLevels = levels;
     }
 

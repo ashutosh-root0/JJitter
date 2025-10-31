@@ -4,12 +4,12 @@ import com.encoder.core.LineEncoder;
 import com.encoder.core.LineEncoder.Scheme;
 import com.encoder.core.PalindromeFinder;
 import com.encoder.core.Scrambler;
-import com.encoder.graphics.SignalPlotter;
+import com.encoder.graphics.OGLSignalPlotter;
 
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class OGLMain {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -86,7 +86,7 @@ public class Main {
         System.out.println("\nGenerating plot for: " + schemeName);
         
         // Launch the JOGL window
-        SignalPlotter.plot(signalLevels, schemeName + " | " + digitalData);
+        OGLSignalPlotter.plot(signalLevels, schemeName + " | " + digitalData);
 
         scanner.close();
     }
